@@ -137,9 +137,6 @@ public class Main {
              System.out.println("меньше двух других чисел " + one);
          }
          else {System.out.println("большее число " + one);
-
-
-
          }
 
 
