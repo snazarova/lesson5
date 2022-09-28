@@ -92,7 +92,59 @@ public class Main {
          }
          else {System.out.println("В вагоне есть свободные стоячие места");
         }
-        }
+
+         // задание 3 task1
+        int childAge = 5;
+         if (childAge >= 2 && childAge <= 6) {
+             System.out.println("Человек должен ходить в садик");
+         }
+         int manAge = 12;
+         if ( manAge >= 7 && manAge <= 18) {
+             System.out.println("Человек должен ходить в школу");
+         }
+         int peopleAge = 20;
+         if (peopleAge >= 18 && peopleAge <= 24) {
+             System.out.println("человек учится в универститете");
+         }
+         int oneAge = 25;
+         if (oneAge <= 24) {
+             System.out.println("Человек учится в универститете");
+         }
+         else {
+             System.out.println("Человеку пора искать работу");
+         }
+
+         // task2
+        int childrenAge = 4;
+         if (childrenAge > 5) {
+             System.out.println("ребенок может кататься на качелях");
+         }
+         else {
+             System.out.println("Ребенок не может кататься на качелях");
+         }
+         if (childrenAge > 5 && childrenAge < 14) {
+             System.out.println("Ребенок может кататься только в сопровождении взрослого");
+         }
+         if (childrenAge > 14) {
+             System.out.println("Ребенок может каться без взрослого");
+         }
+
+         // task3
+        int one = 10;
+         int two = 8;
+         int three = 3;
+         if (one < 8 && one < 3) {
+             System.out.println("меньше двух других чисел " + one);
+         }
+         else {System.out.println("большее число " + one);
+
+
+
+         }
+
+
+
+    }
         }
 
 
