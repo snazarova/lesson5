@@ -28,21 +28,23 @@ public class Main {
         int allPlace = 102;
         int seatPlace = 60;
         int standPlace = allPlace - seatPlace;
-        if (seatPlace >= 60) {
-            System.out.println("Сидячих мест в вагоне нет");
+        int seatUsed = 46;
+        int standUsed = 30;
+
+        if (seatUsed < seatPlace ) {
+            System.out.println(" вагоне еще " + (seatPlace - seatUsed ) + "сидячихмест");
         }
-        if (seatPlace < 60) {
-            System.out.println("В Вагоне есть сидячие места");
+        if (seatUsed == seatPlace) {
+            System.out.println("В Вагоне нет сидячих мест");
         }
-        if (standPlace >= 42) {
+        if (seatUsed == standPlace) {
             System.out.println("В вагоне стоячих мест нет");
         }
-        if (standPlace < 42) {
-            System.out.println("В Вагоне есть стоячие места");
+        if (standUsed < standPlace) {
+            System.out.println("В Вагоне есть" + (standPlace - standUsed) + " стоячих мест");
         }
-        if (allPlace >= 102) {
-            System.out.println("В вагоне нет свободных мест");
-        }
+
+
         // задание2 task1
         int age1 = 17;
         if (age1 >= 18) {
@@ -53,96 +55,91 @@ public class Main {
 
         // task2
         int ageChild = 7;
-        if (ageChild >= 7) {
+        if (ageChild >= 7 && ageChild < 18) {
             System.out.println("Ребенок учится в школе");
-        } else {
-            System.out.println("ребенок не учится в школе");
-        }
-        int ageMan = 18;
-        if (ageMan >= 18) {
-            System.out.println("Человек закончил школу и может отправляться в университет");
-        }
+        } else if (ageChild >= 18 && ageChild < 24){
+            System.out.println("Человек учится в универститете");
+        } else if ( ageChild >= 24) {
+                System.out.println("Человеку пора искать работу");
+            }
         else {System.out.println("Человек еще не закончил школу");}
 
-        int agePeople = 24;
-        if (agePeople >= 24) {
-            System.out.println("человек окончил универститет, может искать работу");
-        }
-        else {System.out.println("Человек не окончил универститет");
-        }
-
         // task3
-        int placeInVan = 102;
-        int seating = 60;
-        int standing = placeInVan - seating;
-        if (placeInVan >= 102) {
-            System.out.println("В вагоне нет мест");
-        }
-        else {
-            System.out.println("В вагоне есть свободные места");
-        }
-        if (seating >= 60) {
+        int allPlace1 = 102;
+        int seatPlace1 = 60;
+        int standPlace1 = allPlace - seatPlace;
+        int seatUsed1 = 40;
+        int standUsed1 = 41;
+        if (seatUsed1 < seatPlace1) {
+            System.out.println("В Вагоне " + (seatPlace1 - seatUsed1) + " свободных сидячих мест");
+        } else {
             System.out.println("В вагоне нет сидячих мест");
+            if (seatUsed1 < standPlace1) {
+                System.out.println("В вагоне" + (standPlace1 - standUsed1) + " свободных стоячих мест");
+            } else {
+                System.out.println("В вагоне нет свободных стоячих мест");
+            }
+
+            // задание 3 task1
+            int peopleAge = 5;
+            if (peopleAge >= 2 && peopleAge <= 6) {
+                System.out.println("Если возраст человека " + peopleAge + " то ему нужно ходить в садик");
+            } else if (peopleAge >= 7 && peopleAge <= 18) {
+                System.out.println("Если возраст человека " + peopleAge + " то ему нужно ходить в школу");
+            } else if (peopleAge > 18 && peopleAge <= 24) {
+                System.out.println("Если возраст человека " + peopleAge + " то ему нужно ходить в универ");
+            } else if (peopleAge > 24) {
+                System.out.println("Если возраст человека " + peopleAge + " то ему нужно ходить на работу");
+            }
+
+
+            // task2
+            int childrenAge = 4;
+            if (childrenAge < 5) {
+                System.out.println("ребенок не может кататься на атракционе");
+            } else if (childrenAge < 14) {
+                System.out.println("Ребенок может кататься только в сопровождении взрослого");
+            } else {
+                System.out.println("Ребенок может каться без взрослого");
+            }
+
+            // task3
+            int one = 10;
+            int two = 8;
+            int three = 3;
+            if (one > two) {
+                if (one >= three) {
+                    System.out.println(" Максимальное число " + one);
+                } else {
+                    System.out.println("большее число " + three);
+                }
+            } else if (two > one) {
+                if (two >= three) {
+                    System.out.println(" максимальное число " + two);
+                } else {
+                    System.out.println("Максимальное число " + three);
+                }
+            } else {
+                if (one > three) {
+                    System.out.println("Максимальное число " + one);
+                } else if (three > one) {
+                    System.out.println("Максимальное число " + three);
+                } else {
+                    System.out.println("Все 3 числа равны");
+                }
+            }
         }
-        else {
-            System.out.println("В вагоне есть сидячие места");
-        }
-         if (standing >= 42) {
-             System.out.println("В вагоне нет стоячих мест");
-         }
-         else {System.out.println("В вагоне есть свободные стоячие места");
-        }
-
-         // задание 3 task1
-        int childAge = 5;
-         if (childAge >= 2 && childAge <= 6) {
-             System.out.println("Человек должен ходить в садик");
-         }
-         int manAge = 12;
-         if ( manAge >= 7 && manAge <= 18) {
-             System.out.println("Человек должен ходить в школу");
-         }
-         int peopleAge = 20;
-         if (peopleAge >= 18 && peopleAge <= 24) {
-             System.out.println("человек учится в универститете");
-         }
-         int oneAge = 25;
-         if (oneAge <= 24) {
-             System.out.println("Человек учится в универститете");
-         }
-         else {
-             System.out.println("Человеку пора искать работу");
-         }
-
-         // task2
-        int childrenAge = 4;
-         if (childrenAge > 5) {
-             System.out.println("ребенок может кататься на качелях");
-         }
-         else {
-             System.out.println("Ребенок не может кататься на качелях");
-         }
-         if (childrenAge > 5 && childrenAge < 14) {
-             System.out.println("Ребенок может кататься только в сопровождении взрослого");
-         }
-         if (childrenAge > 14) {
-             System.out.println("Ребенок может каться без взрослого");
-         }
-
-         // task3
-        int one = 10;
-         int two = 8;
-         int three = 3;
-         if (one < 8 && one < 3) {
-             System.out.println("меньше двух других чисел " + one);
-         }
-         else {System.out.println("большее число " + one);
-         }
-
-
-
     }
-        }
+
+
+             }
+
+
+
+
+
+
+
 
 
 
